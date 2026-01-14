@@ -73,15 +73,28 @@ body{
   width:100%;
   background:#ffffff;
   border-radius:16px;
-  padding:16px;
+  padding:14px 16px;
   margin:14px 0;
   font-size:15px;
   font-weight:600;
   color:#111;
   text-decoration:none;
-  display:block;
+  display:flex;
+  align-items:center;
+  gap:12px;
   box-shadow:0 5px 12px rgba(0,0,0,.15);
   transition:.2s ease;
+}
+
+.btn img{
+  width:22px;
+  height:22px;
+  object-fit:contain;
+}
+
+.btn span{
+  flex:1;
+  text-align:left;
 }
 
 .btn:hover{
@@ -92,7 +105,7 @@ body{
   transform:scale(.97);
 }
 
-/* Disabled Button */
+/* Disabled */
 .btn.disabled{
   background:#dcdcdc;
   color:#777;
@@ -100,6 +113,7 @@ body{
   pointer-events:none;
   opacity:.8;
 }
+
 
 /* Footer */
 .footer{
@@ -147,17 +161,21 @@ body{
     <div class="mail">✉️</div>
 
     <!-- BUTTONS -->
-    <a class="btn" href="#">
-      Download App SCA
+   <a class="btn" href="#">
+      <img src="download.png" alt="Download">
+      <span>Download APP SCA</span>
     </a>
-
+    
     <a class="btn" href="#">
-      Registrasi User Baru SCA
+      <img src="register.png" alt="Register">
+      <span>Registrasi User Baru SCA</span>
     </a>
-
+    
     <a class="btn disabled" href="#">
-      Coming Soon
+      <img src="soon.png" alt="Coming Soon">
+      <span>Coming Soon</span>
     </a>
+
 
     <!-- FOOTER -->
     <div class="copyright">
