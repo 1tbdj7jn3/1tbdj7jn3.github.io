@@ -4,22 +4,47 @@
 <meta charset="UTF-8">
 <title>JNE BDJ - Link Bio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
+*{
+    box-sizing:border-box;
+}
 body{
     margin:0;
     padding:0;
-    font-family: Arial, sans-serif;
-    background:#f2f2f2;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: url("bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display:flex;
+    justify-content:center;
 }
+
+/* wrapper agar selalu center */
+.wrapper{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding:20px 10px;
+}
+
+/* card utama */
 .container{
+    width:100%;
     max-width:420px;
-    margin:20px auto;
+    background:rgba(255,255,255,0.95);
+    border-radius:25px;
+    padding:25px 18px 35px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
     text-align:center;
 }
+
+/* logo */
 .logo{
     width:90px;
-    margin:15px auto;
+    margin:10px auto;
 }
+
+/* text */
 h1{
     margin:10px 0 5px;
     font-size:22px;
@@ -29,70 +54,82 @@ h1{
     color:#555;
 }
 .mail{
-    margin:10px 0 25px;
-    font-size:20px;
+    margin:12px 0 25px;
+    font-size:22px;
 }
+
+/* tombol */
 .btn{
+    width:100%;
     background:#ffffff;
     border-radius:15px;
     padding:16px;
-    margin:15px 0;
+    margin:14px 0;
     font-size:15px;
-    font-weight:bold;
+    font-weight:600;
     color:#000;
     text-decoration:none;
     display:block;
-    box-shadow:0 4px 8px rgba(0,0,0,.1);
-    transition:0.2s;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+    transition:.2s;
 }
 .btn:hover{
-    background:#eaeaea;
+    background:#f0f0f0;
 }
+.btn:active{
+    transform:scale(.97);
+}
+
+/* footer */
 .footer{
-    margin-top:30px;
+    margin-top:25px;
     font-size:12px;
     color:#666;
 }
 .footer a{
     color:#666;
     text-decoration:none;
-    margin:0 5px;
+    margin:0 6px;
+}
+
+/* responsive untuk HP kecil */
+@media(max-width:360px){
+    h1{font-size:20px;}
+    .btn{font-size:14px;padding:14px;}
 }
 </style>
 </head>
+
 <body>
 
-<div class="container">
+<div class="wrapper">
+  <div class="container">
 
-    <!-- LOGO -->
-    <img src="logo.png" class="logo" alt="Logo">
+      <img src="logo.png" class="logo" alt="Logo">
 
-    <!-- TITLE -->
-    <h1>JNE BDJ</h1>
-    <div class="subtitle">Bergerak Bersama</div>
+      <h1>JNE BDJ</h1>
+      <div class="subtitle">Bergerak Bersama</div>
 
-    <!-- ICON EMAIL -->
-    <div class="mail">✉️</div>
+      <div class="mail">✉️</div>
 
-    <!-- BUTTONS -->
-    <a class="btn" href="https://link-download-app.com" target="_blank">
+      <a class="btn" href="#">
         Download APP SCA
-    </a>
+      </a>
 
-    <a class="btn" href="https://link-registrasi.com" target="_blank">
+      <a class="btn" href="#">
         Registrasi User Baru SCA
-    </a>
+      </a>
 
-    <a class="btn" href="https://website-kamu.com" target="_blank">
+      <a class="btn" href="#">
         Personal Website
-    </a>
+      </a>
 
-    <!-- FOOTER -->
-    <div class="footer">
+      <div class="footer">
         <a href="#">Report</a> • 
         <a href="#">Privacy</a>
-    </div>
+      </div>
 
+  </div>
 </div>
 
 </body>
