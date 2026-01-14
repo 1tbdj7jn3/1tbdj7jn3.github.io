@@ -6,96 +6,128 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+/* Reset */
 *{
-    box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI", Arial, sans-serif;
 }
+
+/* Background */
 body{
-    margin:0;
-    padding:0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: url("bg.jpeg") no-repeat center center fixed;
-    background-size: cover;
-    display:flex;
-    justify-content:center;
+  min-height:100vh;
+  background: 
+    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+    url("bg.jpeg") no-repeat center center;
+  background-size: cover;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-/* wrapper agar selalu center */
+/* Wrapper */
 .wrapper{
-    width:100%;
-    display:flex;
-    justify-content:center;
-    padding:20px 10px;
+  width:100%;
+  padding:20px;
+  display:flex;
+  justify-content:center;
 }
 
-/* card utama */
+/* Card utama */
 .container{
-    width:100%;
-    max-width:420px;
-    background:rgba(255,255,255,0.95);
-    border-radius:25px;
-    padding:25px 18px 35px;
-    box-shadow:0 8px 20px rgba(0,0,0,.2);
-    text-align:center;
+  width:100%;
+  max-width:420px;
+  background:rgba(255,255,255,0.96);
+  border-radius:28px;
+  padding:28px 20px 35px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+  text-align:center;
 }
 
-/* logo */
-.logo{
-    width:90px;
-    margin:10px auto;
+/* Header */
+.header img{
+  width:95px;
+  margin-bottom:12px;
 }
 
-/* text */
-h1{
-    margin:10px 0 5px;
-    font-size:22px;
+.header h1{
+  font-size:22px;
+  font-weight:700;
+  color:#111;
 }
-.subtitle{
-    font-size:14px;
-    color:#555;
+
+.header .subtitle{
+  font-size:14px;
+  color:#666;
+  margin-top:4px;
 }
+
 .mail{
-    margin:12px 0 25px;
-    font-size:22px;
+  margin:14px 0 24px;
+  font-size:22px;
 }
 
-/* tombol */
+/* Button */
 .btn{
-    width:100%;
-    background:#ffffff;
-    border-radius:15px;
-    padding:16px;
-    margin:14px 0;
-    font-size:15px;
-    font-weight:600;
-    color:#000;
-    text-decoration:none;
-    display:block;
-    box-shadow:0 4px 10px rgba(0,0,0,.15);
-    transition:.2s;
+  width:100%;
+  background:#ffffff;
+  border-radius:16px;
+  padding:16px;
+  margin:14px 0;
+  font-size:15px;
+  font-weight:600;
+  color:#111;
+  text-decoration:none;
+  display:block;
+  box-shadow:0 5px 12px rgba(0,0,0,.15);
+  transition:.2s ease;
 }
+
 .btn:hover{
-    background:#f0f0f0;
+  background:#f2f2f2;
 }
+
 .btn:active{
-    transform:scale(.97);
+  transform:scale(.97);
 }
 
-/* footer */
+/* Disabled Button */
+.btn.disabled{
+  background:#dcdcdc;
+  color:#777;
+  cursor:not-allowed;
+  pointer-events:none;
+  opacity:.8;
+}
+
+/* Footer */
 .footer{
-    margin-top:25px;
-    font-size:12px;
-    color:#666;
-}
-.footer a{
-    color:#666;
-    text-decoration:none;
-    margin:0 6px;
+  margin-top:28px;
+  font-size:12px;
+  color:#777;
 }
 
-/* responsive untuk HP kecil */
+.footer a{
+  color:#777;
+  text-decoration:none;
+  margin:0 6px;
+}
+
+/* Copyright */
+.copyright{
+  margin-top:18px;
+  padding-top:12px;
+  border-top:1px solid #e0e0e0;
+  font-size:11px;
+  color:#888;
+  line-height:1.6;
+}
+
+/* Responsive kecil */
 @media(max-width:360px){
-    h1{font-size:20px;}
-    .btn{font-size:14px;padding:14px;}
+  .header h1{font-size:20px;}
+  .btn{font-size:14px;padding:14px;}
 }
 </style>
 </head>
@@ -105,29 +137,41 @@ h1{
 <div class="wrapper">
   <div class="container">
 
-      <img src="logo.png" class="logo" alt="Logo">
-
+    <!-- HEADER -->
+    <div class="header">
+      <img src="logo.png" alt="Logo JNE BDJ">
       <h1>JNE BDJ</h1>
       <div class="subtitle">Bergerak Bersama</div>
+    </div>
 
-      <div class="mail">✉️</div>
+    <div class="mail">✉️</div>
 
-      <a class="btn" href="#">
-        Download APP SCA
-      </a>
+    <!-- BUTTONS -->
+    <a class="btn" href="#">
+      Download APP SCA
+    </a>
 
-      <a class="btn" href="#">
-        Registrasi User Baru SCA
-      </a>
+    <a class="btn" href="#">
+      Registrasi User Baru SCA
+    </a>
 
-      <a class="btn disabled" href="#" onclick="return false;">
-        Coming Soon
-      </a>
+    <a class="btn disabled" href="#">
+      Coming Soon
+    </a>
 
-      <div class="footer">
-        <a href="#">Report</a> • 
-        <a href="#">Privacy</a>
-      </div>
+    <!-- FOOTER -->
+    <div class="footer">
+      <a href="#">Report</a> • 
+      <a href="#">Privacy</a>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="copyright">
+      © 2026 JNE BDJ<br>
+      Developed by:<br>
+      Farid B (0821 4912 6443)<br>
+      Ikhlas P (0895 3260 07598)
+    </div>
 
   </div>
 </div>
